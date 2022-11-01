@@ -15,7 +15,7 @@ Final Task Intership Jatis Mobile as IT Dev (Core)
 
 -> Insert Token in your database MYSQL or XAMPP <br/>
 Example : <br/>
-INSERT INTO Toke (id,)
+INSERT INTO token (id,token)
 VALUES (2,'token1112022');
 
 
