@@ -11,13 +11,13 @@ Final Task Intership Jatis Mobile as IT Dev (Core)
 
 -> Build Database database with name : `messageapi` in MySQL or XAMPP
 
--> Change database password in text editor :
-- Search the directory `src/main/resources/application.properties`then you find `spring.datasource.password=password`
-- if you use `XAMPP`, you should delete valiue password
-- if you use `MySQL Workbench`, you should change the password if this password is different from yours
-<br/>
-
 -> Run Spring Boot using Eclipse, Inteliij IDEA, Visual Studio Code, etc.<br/>
+
+-> Insert Token in your database MYSQL or XAMPP <br/>
+Example : <br/>
+INSERT INTO Toke (id,)
+VALUES (2,'token1112022');
+
 
 -> Run endpoint with url : `http://localhost:8080/message` in postman <br/>
 
