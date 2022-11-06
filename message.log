@@ -1,0 +1,90 @@
+2022-11-06 11:03:09.934  INFO 18636 --- [main] com.messageapi.dc.MessageApiApplication  : Starting MessageApiApplication using Java 11.0.13 on MSI with PID 18636 (C:\Users\Hafidz\Documents\Django\dc\target\classes started by Hafidz in C:\Users\Hafidz\Documents\Django\dc)
+2022-11-06 11:03:09.944  INFO 18636 --- [main] com.messageapi.dc.MessageApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-11-06 11:03:11.356  INFO 18636 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06 11:03:11.472  INFO 18636 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interfaces.
+2022-11-06 11:03:13.192  INFO 18636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-06 11:03:13.214  INFO 18636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-06 11:03:13.215  INFO 18636 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06 11:03:13.522  INFO 18636 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-06 11:03:13.523  INFO 18636 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3436 ms
+2022-11-06 11:03:13.953  INFO 18636 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06 11:03:14.083  INFO 18636 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-06 11:03:14.401  INFO 18636 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-06 11:03:14.564  INFO 18636 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-06 11:03:14.936  INFO 18636 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-06 11:03:14.971  INFO 18636 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-11-06 11:03:16.321  INFO 18636 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06 11:03:16.334  INFO 18636 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 11:03:17.147  WARN 18636 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06 11:03:17.843  INFO 18636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 11:03:17.862  INFO 18636 --- [main] com.messageapi.dc.MessageApiApplication  : Started MessageApiApplication in 9.027 seconds (JVM running for 10.364)
+2022-11-06 11:03:44.985  INFO 18636 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 11:03:44.986  INFO 18636 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-06 11:03:44.988  INFO 18636 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-06 11:03:45.177  INFO 18636 --- [http-nio-8080-exec-2] c.m.dc.controller.MessageApiController   : [Message] Controller Message Api Has Hit 
+2022-11-06 11:03:45.957  INFO 18636 --- [http-nio-8080-exec-2] c.messageapi.dc.service.ProducerService  : [Message] producer (send message) has successfuly executed
+2022-11-06 11:03:45.958  INFO 18636 --- [http-nio-8080-exec-2] c.m.dc.controller.MessageApiController   : [Message] Payload : {messaging_product=whatsapp, recipient_type=individual, to=6285294243129, type=text, text={preview_url=false, body=yoshh}}, message_id : dcad9a0f-08b8-42e0-9d23-fe3d052a64e7
+2022-11-06 11:03:45.962  INFO 18636 --- [http-nio-8080-exec-2] c.m.dc.controller.MessageApiController   : [Message] Response successfuly sended
+2022-11-06 11:06:27.869  INFO 18636 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 11:06:27.872  INFO 18636 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-06 11:06:27.894  INFO 18636 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-06 11:07:03.409  INFO 5996 --- [main] com.messageapi.dc.MessageApiApplication  : Starting MessageApiApplication using Java 11.0.13 on MSI with PID 5996 (C:\Users\Hafidz\Documents\Django\dc\target\classes started by Hafidz in C:\Users\Hafidz\Documents\Django\dc)
+2022-11-06 11:07:03.415  INFO 5996 --- [main] com.messageapi.dc.MessageApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-11-06 11:07:04.324  INFO 5996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06 11:07:04.413  INFO 5996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interfaces.
+2022-11-06 11:07:05.502  INFO 5996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-06 11:07:05.516  INFO 5996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-06 11:07:05.517  INFO 5996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06 11:07:05.690  INFO 5996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-06 11:07:05.690  INFO 5996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2183 ms
+2022-11-06 11:07:06.014  INFO 5996 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06 11:07:06.100  INFO 5996 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-06 11:07:06.329  INFO 5996 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-06 11:07:06.445  INFO 5996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-06 11:07:06.686  INFO 5996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-06 11:07:06.704  INFO 5996 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-11-06 11:07:08.346  INFO 5996 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06 11:07:08.353  INFO 5996 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 11:07:08.992  WARN 5996 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06 11:07:09.530  INFO 5996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 11:07:09.544  INFO 5996 --- [main] com.messageapi.dc.MessageApiApplication  : Started MessageApiApplication in 6.833 seconds (JVM running for 7.599)
+2022-11-06 11:07:32.549  INFO 5996 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 11:07:32.552  INFO 5996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-06 11:07:32.556  INFO 5996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-11-06 11:07:32.780  INFO 5996 --- [http-nio-8080-exec-1] c.m.dc.controller.MessageApiController   : [Message] Controller Message Api Has Hit 
+2022-11-06 11:07:33.666  INFO 5996 --- [http-nio-8080-exec-1] c.messageapi.dc.service.ProducerService  : [Message] producer (send message) has successfuly executed
+2022-11-06 11:07:33.667  INFO 5996 --- [http-nio-8080-exec-1] c.m.dc.controller.MessageApiController   : [Message] Payload : {messaging_product=whatsapp, recipient_type=individual, to=6285294243129, type=text, text={preview_url=false, body=yoshh}}, message_id : 3ac385e8-06fc-48b6-964a-de4bb3ad2d11
+2022-11-06 11:07:33.674  INFO 5996 --- [http-nio-8080-exec-1] c.m.dc.controller.MessageApiController   : [Message] Response successfuly sended
+2022-11-06 11:08:18.113  INFO 5996 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 11:08:18.116  INFO 5996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-06 11:08:18.133  INFO 5996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-06 11:10:06.601  INFO 15084 --- [main] com.messageapi.dc.MessageApiApplication  : Starting MessageApiApplication using Java 11.0.13 on MSI with PID 15084 (C:\Users\Hafidz\Documents\Django\dc\target\classes started by Hafidz in C:\Users\Hafidz\Documents\Django\dc)
+2022-11-06 11:10:06.605  INFO 15084 --- [main] com.messageapi.dc.MessageApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-11-06 11:10:07.523  INFO 15084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-06 11:10:07.613  INFO 15084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interfaces.
+2022-11-06 11:10:08.807  INFO 15084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-06 11:10:08.831  INFO 15084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-06 11:10:08.832  INFO 15084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-06 11:10:09.003  INFO 15084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-06 11:10:09.004  INFO 15084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2316 ms
+2022-11-06 11:10:09.293  INFO 15084 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-06 11:10:09.380  INFO 15084 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-06 11:10:09.551  INFO 15084 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-06 11:10:09.659  INFO 15084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-06 11:10:09.864  INFO 15084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-06 11:10:09.882  INFO 15084 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-11-06 11:10:10.730  INFO 15084 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-06 11:10:10.738  INFO 15084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 11:10:11.351  WARN 15084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-06 11:10:11.872  INFO 15084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-06 11:10:11.884  INFO 15084 --- [main] com.messageapi.dc.MessageApiApplication  : Started MessageApiApplication in 6.008 seconds (JVM running for 7.033)
+2022-11-06 11:10:26.800  INFO 15084 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 11:10:26.803  INFO 15084 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-06 11:10:26.806  INFO 15084 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-06 11:10:27.015  INFO 15084 --- [http-nio-8080-exec-2] c.m.dc.controller.MessageApiController   : [Message] Controller Message Api Has Hit 
+2022-11-06 11:10:27.748  INFO 15084 --- [http-nio-8080-exec-2] c.messageapi.dc.service.ProducerService  : [Message] producer (send message) has successfuly executed
+2022-11-06 11:10:27.749  INFO 15084 --- [http-nio-8080-exec-2] c.m.dc.controller.MessageApiController   : [Message] Payload : {messaging_product=whatsapp, recipient_type=individual, to=6285294243129, type=text, text={preview_url=false, body=yoshh}}, message_id : e242721c-8784-461a-ae3e-2064910846c8
+2022-11-06 11:10:27.756  INFO 15084 --- [http-nio-8080-exec-2] c.m.dc.controller.MessageApiController   : [Message] Response successfuly sended
+2022-11-06 11:13:21.590  INFO 15084 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-06 11:13:21.595  INFO 15084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-06 11:13:21.612  INFO 15084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

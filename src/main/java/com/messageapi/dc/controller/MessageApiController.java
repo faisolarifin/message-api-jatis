@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 public class MessageApiController {
     Logger logger = LoggerFactory.getLogger(MessageApiController.class);
 
-
     @Autowired
     private MessageService messageService;
 

@@ -7,7 +7,6 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class PayloadDTO {
 
     private String messaging_product;

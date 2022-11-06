@@ -14,8 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -27,6 +25,8 @@ import java.util.*;
 public class MessageService {
 
     Logger logger = LoggerFactory.getLogger(MessageApiController.class);
+
+    HashMap<String,Object> hashMap = new HashMap<>();
 
     @Autowired
     private ProducerService producerService;
@@ -42,7 +42,7 @@ public class MessageService {
             if (author ==  null){
                 responseFail.put("status","Token Null");
                 responseFail.put("code","401");
-                logger.error("[Message] token null");
+                logger.error("[Error] token null");
                 return new ResponseEntity<>(responseFail,HttpStatus.UNAUTHORIZED);
             }
 
@@ -53,7 +53,7 @@ public class MessageService {
             if (tokenOptional.isEmpty()){
                 responseFail.put("status","Token Not Found");
                 responseFail.put("code","401");
-                logger.error("[Message] token not found");
+                logger.error("[Error] token not found");
                 return new ResponseEntity<>(responseFail,HttpStatus.UNAUTHORIZED);
             }
 
@@ -62,7 +62,7 @@ public class MessageService {
                 String message_product_err = "messaging_product null or not whatsapp";
                 responseFail.put("status",message_product_err);
                 responseFail.put("code","400");
-                logger.error("[Message] messaging_product null or not whatsapp");
+                logger.error("[Error] messaging_product null or not whatsapp");
                 return new ResponseEntity<>(responseFail,HttpStatus.BAD_REQUEST);
             }
 
@@ -70,7 +70,7 @@ public class MessageService {
                 String recipient_err = "recipient_type null or not individual";
                 responseFail.put("status",recipient_err);
                 responseFail.put("code","400");
-                logger.error("[Message] recipient_type null or not individual");
+                logger.error("[Error] recipient_type null or not individual");
                 return new ResponseEntity<>(responseFail,HttpStatus.BAD_REQUEST);
             }
 
@@ -79,7 +79,7 @@ public class MessageService {
                 String noWa = "Number is null or digit number less than equals to 11";
                 responseFail.put("status",noWa);
                 responseFail.put("code","400");
-                logger.error("[Message] Number is null or digit number less than equals to 11");
+                logger.error("[Error] Number is null or digit number less than equals to 11");
                 return new ResponseEntity<>(responseFail,HttpStatus.BAD_REQUEST);
             }
 
@@ -87,7 +87,7 @@ public class MessageService {
                 String type_err = "Type null or not text";
                 responseFail.put("status",type_err);
                 responseFail.put("code","400");
-                logger.error("[Message] Type null or not text");
+                logger.error("[Error] Type null or not text");
                 return new ResponseEntity<>(responseFail,HttpStatus.BAD_REQUEST);
             }
 
@@ -95,7 +95,7 @@ public class MessageService {
                 String preview_err = "Preview url is null or not false";
                 responseFail.put("status",preview_err);
                 responseFail.put("code","400");
-                logger.error("[Message] Preview url is null or not false");
+                logger.error("[Error] Preview url is null or not false");
                 return new ResponseEntity<>(responseFail,HttpStatus.BAD_REQUEST);
             }
 
@@ -103,7 +103,7 @@ public class MessageService {
                 String body_err = "Body is null";
                 responseFail.put("status",body_err);
                 responseFail.put("code","400");
-                logger.error("[Message] Body is null");
+                logger.error("[Error] Body is null");
                 return new ResponseEntity<>(responseFail,HttpStatus.BAD_REQUEST);
             }
 
@@ -130,12 +130,14 @@ public class MessageService {
             }
 
             Map<String, Object> payload = (new ObjectMapper()).convertValue(request, Map.class);
-
+            Map<String,Object> hasfjap = new HashMap<>();
             producerService.sendMessage(uuIdGenerate, payload);
-            logger.info("[Message] Payload : {}, Message_id : {}",payload,uuIdGenerate);
+            logger.info("[Message] Payload : {}, message_id : {}",payload,uuIdGenerate);
             //Response
 
             List<ResponseContacts> responseContacts = new ArrayList<>();
+
+            HashMap<String,Object> hashMap = new HashMap<>();
 
             responseContacts.add(ResponseContacts.builder()
                     .input(request.getTo())
@@ -153,7 +155,7 @@ public class MessageService {
         }catch (Exception e){
             responseFail.put("status","ERROR_INTERNAL_SERVER");
             responseFail.put("code","500");
-            logger.error("[Message] ERROR_INTERNAL_SERVER, Has Error : {}",e.getMessage());
+            logger.error("[Error] ERROR_INTERNAL_SERVER, Has Error : {}",e.getMessage());
             return  new ResponseEntity<>(responseFail, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

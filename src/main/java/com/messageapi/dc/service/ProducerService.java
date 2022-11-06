@@ -1,5 +1,8 @@
 package com.messageapi.dc.service;
 
+import com.messageapi.dc.controller.MessageApiController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.core.JmsTemplate;
@@ -16,21 +19,29 @@ import javax.jms.MapMessage;
 @Component
 public class ProducerService {
 
-    @Value("${active-mq.topic}")
-    String topic;
+    Logger logger = LoggerFactory.getLogger(ProducerService.class);
+
+    @Value("${spring.activemq.queue}")
+    String queue;
 
     @Autowired
     JmsTemplate jmsTemplate;
 
     public void sendMessage(final String messageId, final Map<String, Object> payloadMessage) {
-        jmsTemplate.send(topic, new MessageCreator() {
+        try {
+            jmsTemplate.send(queue, new MessageCreator() {
 
-            public Message createMessage(Session session) throws JMSException {
-                MapMessage message = session.createMapMessage();
-                message.setObject("message_id", messageId);
-                message.setObject("payload", payloadMessage);
-                return message;
-            }
-        });
+                public Message createMessage(Session session) throws JMSException {
+                    MapMessage message = session.createMapMessage();
+                    message.setObject("message_id", messageId);
+                    message.setObject("payload", payloadMessage);
+                    return message;
+                }
+            });
+            logger.info("[Message] producer (send message) has successfuly executed");
+        }catch (Exception e){
+            logger.error("[Error] send message has failed because {} ",e.getMessage());
+        }
+
     }
 }
